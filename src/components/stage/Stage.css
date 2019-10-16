@@ -1,0 +1,115 @@
+/* 
+    Divs that act like a table --> 
+    Optional txt idea - https://mattboldt.com/css-100-percent-height/ 
+*/
+#stageContainer {
+    position: relative; /* fixes Title issue, but causes others with more */
+    height: 480px;
+    overflow: auto; 
+}
+
+#container {
+    background-color: lightgrey;
+    height: 100%;
+    width: 1000px;
+    /* background-image: 'process.env.PUBLIC_URL + /images/m2l1/bg.png'; */
+}
+
+.animateTitle {
+    animation: fadeUp .3s ease cubic-bezier(.25, .25, .50, .75);
+    animation-name: fadeUp;
+    animation-duration: .75s;
+    width: 380px;
+    padding: 10Px; /* instead of margin-top which moves cell */
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-bottom: 0px;
+    /* background-color: rgba(18, 1, 255, 0.226); */
+}
+
+@keyframes fadeUp {
+    from{
+        position: relative;
+        top: 20px;
+        opacity: 0;
+    }
+    to{
+        position: relative;
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+/* PICTURE VIEWER OR LAYOUT B TITLE */
+@keyframes fade {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+  }
+
+#bottomBanner{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5px;
+    width: 1000px;
+    z-index: -1; 
+}
+
+#more{
+    /* background-color: aquamarine; */
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* margin: auto; */
+    top: 455px;
+    width: 1000px;
+    z-index: 1; 
+}
+
+/******** Also used in Bullet.js ***********/
+#row{
+    display: table-row;
+}
+
+#left, #right, #middle{
+    display: table-cell;
+    background-repeat: no-repeat;
+}
+
+/************** Stage Btn Glow ***************/
+
+.stage-full-intro button, .stage-full button {
+    /* display: inline-block; */
+    margin-top: 10px;
+    margin-right: 10px;
+    /* animation: spin infinite 20s linear; */
+    height: 30px;
+    /* width: 80px; */
+    font-size: 16px;
+    font-weight: 700;
+
+    background-color: rgb(65, 65, 65);
+    color: white;
+    border: 0;
+    opacity: 1;
+    filter: alpha(opacity=50);  /* for IE8 and earlier */
+    cursor: pointer;
+  }
+
+  .stage-full-intro button:hover, .stage-full button:hover{
+    opacity: .8;
+  }
+  
+  .stage-full-intro .btnLarge, .stage-full .btnLarge  {
+    animation: glowOrange 2000ms infinite;
+  }
+
+@keyframes glowOrange {
+    0% { box-shadow: 0 0 0px #727272; border: 1px solid rgb(8, 8, 8);}
+    50% { box-shadow: 0 0 15px #ffd900; border: 1px solid #ffd900;}
+    100% { box-shadow: 0 0 0px #727272; border: 1px solid rgb(8, 8, 8);}
+  }

@@ -1,0 +1,45 @@
+
+.mediaFade {
+  position: relative;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  animation: fade .3s ease cubic-bezier(.6, 0.04, 0.98, 0.335); /* easeInCirc */
+  animation-name: fade;
+  animation-duration: 4s;
+}
+
+#mediaContainer {
+  /* display: block; */
+
+  /* can show issues with svg(s) on Layout0, but Layout1 - hoagie doesn't like */
+  /* width: 100%;
+  height: 100%; */
+
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+}
+
+.mediaCue{
+  position: absolute;
+  top: 5px;
+  left: 907px;
+}
+
+.helpBtnPos{
+  position: absolute;
+  top: 160px;
+  left: 250px;
+}
+
+#mediaContainer #speech-bubble, 
+/* #likes, */ .button, #comment-count {
+    margin: 0;
+    padding: 2;
+    border: 1;
+    outline: 0;           
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}

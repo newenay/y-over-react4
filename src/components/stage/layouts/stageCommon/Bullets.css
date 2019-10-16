@@ -1,0 +1,93 @@
+
+/* Container */
+.bulletContainer { 
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+/* Sprite_sheet */
+.spriteContainer {
+    width: 44px;
+    height: 11px;
+    border: 1px;
+    margin-left: auto;
+    margin-top: 5px;
+    margin-right: 0px;
+    display: block;
+    background-image: url("./bullet.png");
+    /* Actual 12 frame animation out of Flash exports into 11 */
+    animation: sprite .5s steps(10) forwards;
+    /* background-color: rgb(211, 100, 35) */
+}
+
+.noSprite {
+    width: 10px;
+    height: 11px;
+    border: 1px;
+    margin-top: 5px;
+    margin-right: 0px;
+    /* display: flex; */
+}
+
+@keyframes sprite {
+    100%{
+        /* Position should be set to 10 frames X 44px */
+        background-position: -440px;
+    }
+}
+
+.animateBullet {
+    animation: fadeLeft .5s ease cubic-bezier(.25, .25, .50, .75);
+    /*transform-origin: center bottom;*/
+    animation-name: fadeLeft;
+    animation-duration: .4s;
+    /* background-color: rgb(104, 230, 115); */
+}
+
+ @keyframes fadeLeft {
+    from{
+        position: relative;
+        left: 60px;
+        opacity: 0;
+    }
+    to{
+        position: relative;
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+/* Bullet text HTML Object */
+.dangerousBullet {
+    padding:  8px;
+    line-height: 125%;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    /* text-indent: 25px; */
+    font-size: 16px;
+    /* width: 356px */
+}
+
+.dangerousBullet p {
+    padding:  0px 0px 0px 0px;
+    line-height: 100%;
+}
+
+.audioTimer {
+    color: magenta;
+    font-size: 10px;
+}
+
+.remove-comment {
+    background: none;
+    border: 0;
+    /* line-height: 1; */
+    opacity: 0.5;
+    filter: alpha(opacity=50);  /* for IE8 and earlier */
+    /* background-color: transparent; */
+    font-size: 18px;
+}
+.remove-comment:hover {
+    color: red;
+    background: none;
+}

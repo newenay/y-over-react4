@@ -1,0 +1,18 @@
+.stage-left {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 400px;
+    /* background-color: rgba(217, 255, 0, 0.308); */
+}
+
+.stage-right { /* img - svg(s) not centering */
+    /* display: block; */
+    margin-top: 7px;
+    margin-left: auto;
+    margin-right: auto;
+    /* max-width: 600px; */
+    /* max-width: 100%; */
+    max-height: 440px;
+    /* background-color: rgba(0, 255, 34, 0.164); */
+}

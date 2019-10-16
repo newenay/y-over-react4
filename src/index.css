@@ -1,13 +1,106 @@
+/* Specificity, this applies to everything down the line, #ID applies to just that thing .class (somewhere in b/w) */
+html {
+    min-width: 1020px; /* see stage-#container, shadow possibly needs 20px? */
+    max-width: 1020px;
+    /* margin: 0 auto; */
+}
+    
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background-color: #EEE;
+    font-family: Helvetica, Arial, "sans-serif";
+    padding: 0; /* 25px works well */
+    margin: 0;
+    overflow: hidden;
+
+    /* make all text unselectable */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+h1 {
+    font-weight: normal;
+    padding:  5px 0 0 5px;
+    text-shadow: 2px 2px 2px #333;
+}
+
+h2 { /* for titles */
+    color: rgb(228, 120, 20);
+    text-align: center;
+    /* padding:  15px 0 0 20px; */
+    text-shadow: 2px 2px 2px #333;
+    font-size: 30px;
+}
+
+h6 {
+    color: rgba(76, 153, 4, 0.699);
+    text-align: center;
+    margin-bottom: 15; /* for UNCLASSIFIED */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+}
+
+p {
+    padding:  10px 10px 10px 10px;
+    line-height: 125%;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    /* text-indent: 25px; */
+    font-size: 16px;
+}
+
+#root li {
+    margin-bottom: 10px;
+}
+
+video {
+	-webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222);    
+    /* margin:0px 0px 0px 0px; */
+    /* width: 100%;  of the cell not the img size */
+}
+
+audio {
+    height: 25px;
+    width: 400px;
+}
+
+button, .btnBase {
+    border-radius: 3px;
+    font-size: 10px;
+    background-color: #555555;
+    color: white;
+    border: 0;
+    opacity: 0.3;
+    filter: alpha(opacity=50);  /* for IE8 and earlier */
+    cursor: pointer;
+}
+
+/* button:hover vs .button:hover (class) in footer.css & PictureViewer.css */
+button:hover, .btnBase:hover, button:focus, 
+.btnBase:focus, button:active, .btnBase:active {
+    background-color:#000000;  /* !important */
+    opacity: 0.3;
+    filter: alpha(opacity=50);
+}
+
+/* Normalize */
+ul { 
+    margin-top: 8px;
+    margin-left: 40px;
+    margin-bottom: 0em;
+    padding: 0px;
+    list-style-type: square;
+    list-style-position: outside;
+    list-style-image: none;
+    /* font-size: 15px; */
+}
+
+.debugger{
+    display: flex;
+    padding: 10px; 
+    background-color: #bceba1;
+
 }
