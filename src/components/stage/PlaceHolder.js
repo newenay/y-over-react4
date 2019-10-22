@@ -5,7 +5,7 @@ import './layouts/stageStylz/LayoutFull.css';
 
 const PlaceHolder = (props) => {
 
-  let _source = process.env.PUBLIC_URL + '/video/PR102_Intro.mp4';
+  let _source = process.env.PUBLIC_URL + '/video/Lorem_Ipsum_640x360p.mp4';
   let n = props.slideControls.currentLesson
   let _bookmark = props.slideControls.lessons[n].bookmark
 
@@ -21,7 +21,7 @@ const PlaceHolder = (props) => {
     <div id='stageContainer'>
       <div id="container">
         <div className='stage-full-intro'>
-          <h2 className="animateTitleLong" hidden >PR 102 - Introduction</h2>
+          <h2 className="animateTitleLong" hidden >Welcome Screen</h2>
             <video onEnded={loadHandler} width="640" height="360" controls autoPlay controlsList="nodownload">
               <source src={_source} type="video/mp4" />
               Your brower does not support the video tag.

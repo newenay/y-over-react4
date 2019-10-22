@@ -30,6 +30,14 @@ const slideControls = {
       bookmark: 0,
       completed: false
     },
+    {
+      id: 1,
+      path: 'm2l1',
+      name: "Abstract Expressionism",
+      currentSlide: 0,
+      bookmark: 0,
+      completed: false
+    },
   ]
 }
 

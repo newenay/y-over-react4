@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 //import { Container, Row, Col, /*Breadcrumb, BreadcrumbItem*/ } from "reactstrap";
-/* import MainMenu from "./MainMenu"; */
+import MainMenu from "./MainMenu";
 import './Header.css';
 
 const Header = (props) => {
@@ -20,7 +20,7 @@ const Header = (props) => {
             </div>
             <div className="p-2 middleHeader"><div id='topBanner'><h6>Unclassified</h6></div>  
             </div>
-            <div className="rightHeader">{/* <MainMenu {...props} /> */}
+            <div className="rightHeader"><MainMenu {...props} />
             </div>
         </div>
     );
