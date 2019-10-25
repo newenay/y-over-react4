@@ -78,7 +78,7 @@ class AudioPlayer extends PureComponent {
   render() {
     return (
       <div>
-        <span><small>{this.state.supposedCurrentTime.toFixed(2)}</small></span>
+        {/* <span><small>{this.state.supposedCurrentTime.toFixed(2)}</small></span> */}
         <audio ref={this.audioRef} preload='none' controls controlsList="nodownload">
           <source src={this.props.source + '.mp3'} type='audio/mpeg' />
           {/* <source  src={this.props.source + '.ogg'} type='audio/ogg' /> */}

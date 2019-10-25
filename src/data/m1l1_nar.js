@@ -103,17 +103,17 @@ const slideBullets = {
   "m1l1f04":[
     {
       "graphic": '/images/m1l1/German-Expressionism-Wassily-Kandinsky.png',
-      "text": "<SubTitle><b><SubTitle>Course is currently in Debug mode (nav unlocked, debugger & console helpers). To lock down course, simply:</b>",
+      "text": "<SubTitle><b><SubTitle>Course is currently in Locked mode, for Debug mode (nav unlocked, debugger & console helpers), simply:</b>",
       "time": "1"
     },
     {
       "graphic": '/images/m1l1/German-Expressionism-Wassily-Kandinsky.png',
-      "text": "Change 'debug' variable in 'store.js' to '<b>false</b>'",
+      "text": "Change 'debug' variable in 'store.js' to '<b>true</b>'",
       "time": "3"
     },
     {
       "graphic": '/images/m1l1/German-Expressionism-Wassily-Kandinsky.png',
-      "text": "Change 'locked' variable in 'store.js' to '<b>true</b>'",
+      "text": "Change 'locked' variable in 'store.js' to '<b>false</b>'",
       "time": "5"
     },
   ],
@@ -126,24 +126,29 @@ const slideBullets = {
   ],
   "m1l1f06":[
     {
-      "graphic": '/images/m1l1/DOS_DOD_PR.png',
+      "graphic": '/images/m1l1/Architecture.png',
       "text": false,
       "time": "1"
     },
     {
-      "graphic": '/images/m1l1/DOS_DOD_PR.png',
-      "text":"<SubTitle><b>This concludes the Personnel Recovery Fundamentals lesson.  You should now be able to:</b>",
+      "graphic": '/images/m1l1/Architecture.png',
+      "text":"<SubTitle><b>This concludes the lesson.  You should now be able to:</b>",
       "time": "2"
     },
     {
-      "graphic": '/images/m1l1/DOS_DOD_PR.png',
-      "text":"Identify the US Government’s approach to Personnel Recovery",
+      "graphic": '/images/m1l1/Architecture.png',
+      "text":"Identify the different layouts avail in the test course, and their graphic pixel limits",
       "time": "6"
     },
     {
-      "graphic": '/images/m1l1/DOS_DOD_PR.png',
-      "text":"Identify the DOD Personnel Recovery system",
+      "graphic": '/images/m1l1/Architecture.png',
+      "text":"Be able switch the course into Unlocked & Debug mode",
       "time": "10"
+    },
+    {
+      "graphic": '/images/m1l1/Architecture.png',
+      "text":"Have a general understanding of the course Architecture",
+      "time": "15"
     },
   ],
   "m1l1f07":[

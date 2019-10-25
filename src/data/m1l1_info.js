@@ -51,7 +51,7 @@ const slideInfo = [
     "cuePoint": 0,
     "layout": 0,
     "optionalTxt": false,
-    "audio": true,     
+    "audio": false,     
   },
   {
     "id": "m1l1f07",
