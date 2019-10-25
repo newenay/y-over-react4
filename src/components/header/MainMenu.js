@@ -39,12 +39,10 @@ const MainMenu = (props) => {
       <Link className="linkAdj" to='/help'>
         <span aria-label='Help' role='img'>&#9072; Help</span>
       </Link>
-      <Link className="linkAdj" to={process.env.PUBLIC_URL + "/xtras/resources.html"} target="blank">
-        <span aria-label='Resources' role='img'>&#128218; Resources</span>
-      </Link>
-      <Link className="linkAdj" to={process.env.PUBLIC_URL + "/xtras/glossary.html"} target="blank">
-        <span aria-label='Glossary' role='img'> &#128366; Glossary</span>
-      </Link>
+      <a className="linkAdj" href={process.env.PUBLIC_URL + "/xtras/resources.html"} target="blank">
+        <span aria-label='Resources' role='img'>&#128218; Resources</span></a>
+      <a className="linkAdj" href={process.env.PUBLIC_URL + "/xtras/glossary.html"} target="blank">
+        <span aria-label='Glossary' role='img'> &#128366; Glossary</span></a>
       <div>{debugHelpers()}</div>        
     </div>
   );

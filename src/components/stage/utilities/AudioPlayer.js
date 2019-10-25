@@ -77,17 +77,20 @@ class AudioPlayer extends PureComponent {
 
   render() {
     return (
-      <audio ref={this.audioRef} preload='none' controls controlsList="nodownload">
-        <source src={this.props.source + '.mp3'} type='audio/mpeg' />
-        {/* <source  src={this.props.source + '.ogg'} type='audio/ogg' /> */}
+      <div>
+        <span><small>{this.state.supposedCurrentTime.toFixed(2)}</small></span>
+        <audio ref={this.audioRef} preload='none' controls controlsList="nodownload">
+          <source src={this.props.source + '.mp3'} type='audio/mpeg' />
+          {/* <source  src={this.props.source + '.ogg'} type='audio/ogg' /> */}
 
-        {/* <track default
-          src={this.props.source + '.vtt'}
-          kind='captions'
-          srcLang='en'
-          label='English Captions'
-        /> */}
-      </audio>
+          {/* <track default
+            src={this.props.source + '.vtt'}
+            kind='captions'
+            srcLang='en'
+            label='English Captions'
+          /> */}
+        </audio>
+      </div>
     );
   }
 
@@ -124,7 +127,7 @@ class AudioPlayer extends PureComponent {
     }
   }
 
-  // Works but clicking seek does fire a pause event (no known fix)
+  // Works but clicking seek does fire a pause event (no known fix), and breaks REWIND feature
   handleSeeking() {
     var node = ReactDOM.findDOMNode(this.audioRef.current),
         currentTime = node.currentTime;
@@ -165,6 +168,7 @@ class AudioPlayer extends PureComponent {
     }
   }
 
+  // Rewind
   updateCurrentTime() {
     var node = ReactDOM.findDOMNode(this.audioRef.current);
     if (node.readyState) {
@@ -172,7 +176,8 @@ class AudioPlayer extends PureComponent {
     }
 
     this.setState({
-      listen: true
+      listen: true,
+      supposedCurrentTime: 0
     });
   }
 
