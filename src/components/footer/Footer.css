@@ -1,31 +1,33 @@
+#lm_container {
+  z-index: -2;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9899d6+1,5a5b9e+12,9899d6+87,323656+97,323656+97,1a192b+100 */
+  background: rgb(152,153,214); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(152,153,214,1) 1%, rgba(90,91,158,1) 12%, rgba(152,153,214,1) 87%, rgba(50,54,86,1) 97%, rgba(50,54,86,1) 97%, rgba(26,25,43,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(152,153,214,1) 1%,rgba(90,91,158,1) 12%,rgba(152,153,214,1) 87%,rgba(50,54,86,1) 97%,rgba(50,54,86,1) 97%,rgba(26,25,43,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(152,153,214,1) 1%,rgba(90,91,158,1) 12%,rgba(152,153,214,1) 87%,rgba(50,54,86,1) 97%,rgba(50,54,86,1) 97%,rgba(26,25,43,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9899d6', endColorstr='#1a192b',GradientType=0 ); /* IE6-9 */
+}
+
 #lessonMenu {
-    width: 100%;
+    width: 1020px;
     height: 50px;
     padding: 0px;
-    margin: 0px;
-    z-index: -2;
-    
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9899d6+1,5a5b9e+12,9899d6+87,323656+97,323656+97,1a192b+100 */
-    background: rgb(152,153,214); /* Old browsers */
-    background: -moz-linear-gradient(top, rgba(152,153,214,1) 1%, rgba(90,91,158,1) 12%, rgba(152,153,214,1) 87%, rgba(50,54,86,1) 97%, rgba(50,54,86,1) 97%, rgba(26,25,43,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(152,153,214,1) 1%,rgba(90,91,158,1) 12%,rgba(152,153,214,1) 87%,rgba(50,54,86,1) 97%,rgba(50,54,86,1) 97%,rgba(26,25,43,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(152,153,214,1) 1%,rgba(90,91,158,1) 12%,rgba(152,153,214,1) 87%,rgba(50,54,86,1) 97%,rgba(50,54,86,1) 97%,rgba(26,25,43,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9899d6', endColorstr='#1a192b',GradientType=0 ); /* IE6-9 */
+    margin: 0 auto;
 }
 
 #lessonMenu .bottomLeftHeader {
-    width: 60%;
+    width: 600px;
     /* overflow: auto; */
 }
 
 #lessonMenu .bottomMidHeader {
-    width: 1%;
-    z-index: -2;
-    /* background-color: darkgray; */
+    width: 1px;
+    /* z-index: -2; */
+    background-color: darkgray;
 }
  /********* SlideNav *********/
 #lessonMenu .bottomRightHeader {
-    width: 29%;
+    width: 400px;
 }
 
 .bottomRightHeader button {

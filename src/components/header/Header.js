@@ -8,19 +8,21 @@ const Header = (props) => {
 
     let i = props.slideControls.currentLesson
     return(
-        <div id="mainMenu" className="d-flex justify-content-between align-self-end leftHeader">
-            <div className="p-2 leftHeader">
-                <div className="d-flex">
-                    <Link to='/'>
-                        <img id="banner_logo" src={process.env.PUBLIC_URL + "/images/banner_logo.png"} alt="#"/>
-                    </Link>
-                    <h1><small>Name of</small><br/><i>the Course</i></h1>
-                    <div><h6>Lesson: {props.slideControls.lessons[i].name}</h6></div>
-                </div>          
-            </div>
-            <div className="p-2 middleHeader"><div id='topBanner'><h6>Unclassified</h6></div>  
-            </div>
-            <div className="rightHeader"><MainMenu {...props} />
+        <div id="mm_container">
+            <div id="mainMenu" className="d-flex justify-content-between align-self-end leftHeader">
+                <div className="p-2 leftHeader">
+                    <div className="d-flex">
+                        <Link to='/'>
+                            <img id="banner_logo" src={process.env.PUBLIC_URL + "/images/banner_logo.png"} alt="#"/>
+                        </Link>
+                        <h1><small>Name of</small><br/><i>the Course</i></h1>
+                        <div><h6>Lesson: {props.slideControls.lessons[i].name}</h6></div>
+                    </div>          
+                </div>
+                <div className="p-2 middleHeader"><div id='topBanner'><h6>Unclassified</h6></div>  
+                </div>
+                <div className="rightHeader"><MainMenu {...props} />
+                </div>
             </div>
         </div>
     );

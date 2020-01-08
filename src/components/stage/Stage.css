@@ -12,6 +12,7 @@
     background-color: lightgrey;
     height: 100%;
     width: 1000px;
+    margin: 0 auto;
     /* background-image: 'process.env.PUBLIC_URL + /images/m2l1/bg.png'; */
 }
 
@@ -64,7 +65,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    /* margin: auto; */
+    margin: 0 auto;
     top: 455px;
     width: 1000px;
     z-index: 1; 

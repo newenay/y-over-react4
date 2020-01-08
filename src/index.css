@@ -1,7 +1,7 @@
 /* Specificity, this applies to everything down the line, #ID applies to just that thing .class (somewhere in b/w) */
 html {
-    min-width: 1020px; /* see stage-#container, shadow possibly needs 20px? */
-    max-width: 1020px;
+    width: 100%; /* see stage-#container, shadow possibly needs 20px? */
+    min-width: 1020px;
     /* margin: 0 auto; */
 }
     

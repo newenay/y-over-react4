@@ -32,7 +32,7 @@ const PlaceHolder = (props) => {
               <button className="btnLarge">Continue to Lesson</button>
             </Link></div>
         </div>
-      </div>  
+      </div> 
     </div>
   );
 }
