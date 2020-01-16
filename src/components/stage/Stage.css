@@ -20,10 +20,10 @@
     animation: fadeUp .3s ease cubic-bezier(.25, .25, .50, .75);
     animation-name: fadeUp;
     animation-duration: .75s;
-    width: 380px;
-    padding: 10Px; /* instead of margin-top which moves cell */
+    width: 400px;
+    padding: 10px; /* instead of margin-top which moves cell */
     margin-top: 0px;
-    margin-left: 20px;
+    margin-left: 0px;
     margin-bottom: 0px;
     /* background-color: rgba(18, 1, 255, 0.226); */
 }

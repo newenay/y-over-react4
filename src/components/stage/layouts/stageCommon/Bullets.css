@@ -1,8 +1,8 @@
 
 /* Container */
 .bulletContainer { 
-    margin-top: 0px;
-    margin-left: 0px;
+    padding: 0;
+    margin-bottom: 5px;
 }
 
 /* Sprite_sheet */
@@ -17,7 +17,7 @@
     background-image: url("./bullet.png");
     /* Actual 12 frame animation out of Flash exports into 11 */
     animation: sprite .5s steps(10) forwards;
-    /* background-color: rgb(211, 100, 35) */
+    /* background-color: rgb(255, 229, 213) */
 }
 
 .noSprite {
@@ -27,6 +27,7 @@
     margin-top: 5px;
     margin-right: 0px;
     /* display: flex; */
+    /* background-color: rgb(255, 229, 213) */
 }
 
 @keyframes sprite {
@@ -59,18 +60,16 @@
 
 /* Bullet text HTML Object */
 .dangerousBullet {
-    padding:  8px;
-    line-height: 125%;
-    margin-top: 0em;
-    margin-bottom: 0em;
+    padding:  5px; /*8*/
+    line-height: 100%;
+    margin: 0;
     /* text-indent: 25px; */
     font-size: 16px;
     /* width: 356px */
 }
 
-.dangerousBullet p {
-    padding:  0px 0px 0px 0px;
-    line-height: 100%;
+.dangerousBullet ul {
+    margin-left: 50px; /* override index.css */
 }
 
 .audioTimer {

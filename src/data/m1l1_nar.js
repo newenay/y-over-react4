@@ -19,7 +19,7 @@ const slideBullets = {
     },
     {
       "graphic": '/images/m1l1/Kirchner_1913_Street_Berlin_1.png',
-      "text": false,
+      "text": "<SubTitle><ul><li>Sub</li><li>Sub</li></ul>",
       "time": "11"
     },
     {

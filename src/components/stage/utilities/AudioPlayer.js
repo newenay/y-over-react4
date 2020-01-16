@@ -7,6 +7,7 @@
 import React, {PureComponent} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+import './AudioPlayer.css'
 
 class AudioPlayer extends PureComponent {
   constructor(props){
@@ -16,8 +17,12 @@ class AudioPlayer extends PureComponent {
       listen: true,
       supposedCurrentTime: 0
     };
-    
+
     this.audioRef = React.createRef(); //prevent invariant() violation
+
+    this.canvasRef = React.createRef();
+    //var canvas, ctx, source, context, analyser, fbc_array;
+
     this.handleProgress = this.handleProgress.bind(this); // varible to binding allow release from DOM on unmount
     this.handleTimeUpdate = this.handleTimeUpdate.bind(this);
     this.handleSeeking = this.handleSeeking.bind(this);
@@ -26,19 +31,20 @@ class AudioPlayer extends PureComponent {
     this.playEvent = this.playEvent.bind(this);
   }
 
-  componentDidMount() {
-
+  componentDidMount() {    
     var node =  ReactDOM.findDOMNode(this.audioRef.current);
     // this.debugConsole('mounted', node, this)
     node.addEventListener('progress', this.handleProgress);
     node.addEventListener('timeupdate', this.handleTimeUpdate);
     node.addEventListener('seeking', this.handleSeeking);
     node.addEventListener('ended', this.handleMediaEnd);
-    node.addEventListener('pause', this.pauseEvent)
-    node.addEventListener('play', this.playEvent)
+    node.addEventListener('pause', this.pauseEvent);
+    node.addEventListener('play', this.playEvent);
 
     this.updateIsPlaying();
     this.props.audioEvents(true, false); // stream avail, ended
+    
+    this.initMp3Player();
   }
 
   componentDidUpdate(prevProps) {
@@ -75,21 +81,57 @@ class AudioPlayer extends PureComponent {
     }
   }
 
+  /* Graphic Audio API bars - Init */
+  initMp3Player(){
+    var node = ReactDOM.findDOMNode(this.audioRef.current);
+    
+    this.context = new AudioContext(); // AudioContext object instance
+    this.analyser = this.context.createAnalyser(); // AnalyserNode method
+    // Re-route audio playback into the processing graph of the AudioContext
+    this.source = this.context.createMediaElementSource(node); 
+    this.source.connect(this.analyser);
+    this.analyser.connect(this.context.destination);
+    
+    this.canvas = this.canvasRef.current
+    this.ctx = this.canvas.getContext('2d');
+  }
+
+  // Looping at the default frame rate that the browser provides(approx. 60 FPS)
+  frameLooper() {
+    this.fbc_array = new Uint8Array(this.analyser.frequencyBinCount);
+    this.analyser.getByteFrequencyData(this.fbc_array);
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height); // Clear the canvas
+    this.ctx.fillStyle = '#FFCC00'; // Color of the bars
+    var bars = 100;
+    
+    for (var i = 0; i < bars; i++) {
+      var bar_x = i * 3;
+      var bar_width = 2;
+      var bar_height = -(this.fbc_array[i] / 2);
+      
+      //  fillRect( x, y, width, height ) // Explanation of the parameters below
+      this.ctx.fillRect(bar_x, this.canvas.height, bar_width, bar_height);
+    }
+  }
+
   render() {
     return (
-      <div>
-        {/* <span><small>{this.state.supposedCurrentTime.toFixed(2)}</small></span> */}
-        <audio ref={this.audioRef} preload='none' controls controlsList="nodownload">
-          <source src={this.props.source + '.mp3'} type='audio/mpeg' />
-          {/* <source  src={this.props.source + '.ogg'} type='audio/ogg' /> */}
+      <div id='mp3_player'>
+        <div><canvas ref={this.canvasRef} /></div>
+        <div id="audio_box">
+          {/* <span><small>{this.state.supposedCurrentTime.toFixed(2)}</small></span> */}
+          <audio ref={this.audioRef} preload='none' controls controlsList="nodownload">
+            <source src={this.props.source + '.mp3'} type='audio/mpeg' />
+            {/* <source  src={this.props.source + '.ogg'} type='audio/ogg' /> */}
 
-          {/* <track default
-            src={this.props.source + '.vtt'}
-            kind='captions'
-            srcLang='en'
-            label='English Captions'
-          /> */}
-        </audio>
+            {/* <track default
+              src={this.props.source + '.vtt'}
+              kind='captions'
+              srcLang='en'
+              label='English Captions'
+            /> */}
+          </audio>
+        </div>
       </div>
     );
   }
@@ -125,6 +167,7 @@ class AudioPlayer extends PureComponent {
         supposedCurrentTime: currentTime
       });
     }
+    this.frameLooper();
   }
 
   // Works but clicking seek does fire a pause event (no known fix), and breaks REWIND feature
@@ -204,6 +247,7 @@ class AudioPlayer extends PureComponent {
     if (isPlaying) {
         node.pause();
     }
+    //this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
   }
 
   playEvent() {
