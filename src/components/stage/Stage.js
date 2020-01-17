@@ -140,10 +140,6 @@ class Stage extends PureComponent {
 
             {this.debugHelpers(_cuePoint, allBullets.length)}
 
-            <div id='bottomBanner'>
-              <h6>Unclassified</h6>
-            </div>
-
             <span className='audioSkin'>
               {/* <ErrorBoundary> */}
                 {this.checkAudioSource(slide.audio, audioSrc, _cuePoint, allBullets)}

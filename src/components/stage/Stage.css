@@ -1,7 +1,6 @@
-/* 
-    Divs that act like a table --> 
-    Optional txt idea - https://mattboldt.com/css-100-percent-height/ 
-*/
+/* Divs that act like a table --> 
+    Optional txt idea - https://mattboldt.com/css-100-percent-height/ */
+
 #stageContainer {
     position: relative; /* fixes Title issue, but causes others with more */
     height: 480px;
@@ -50,15 +49,6 @@
         opacity: 1;
     }
   }
-
-#bottomBanner{
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 5px;
-    width: 1000px;
-    z-index: -1; 
-}
 
 #more{
     /* background-color: aquamarine; */

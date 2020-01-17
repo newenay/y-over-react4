@@ -15,13 +15,15 @@ const Header = (props) => {
                         <Link to='/'>
                             <img id="banner_logo" src={process.env.PUBLIC_URL + "/images/banner_logo.png"} alt="#"/>
                         </Link>
-                        <h1><small>Name of</small><br/><i>the Course</i></h1>
-                        <div><h6>Lesson: {props.slideControls.lessons[i].name}</h6></div>
+                        <div>
+                            <h1><small>Name of</small> <i>the Course</i></h1>
+                            <div><h6>Lesson: {props.slideControls.lessons[i].name}</h6></div>
+                        </div>
                     </div>          
                 </div>
                 <div className="p-2 middleHeader"><div id='topBanner'><h6>Unclassified</h6></div>  
                 </div>
-                <div className="rightHeader"><MainMenu {...props} />
+                <div className="p-2 rightHeader"><div><MainMenu {...props} /></div>
                 </div>
             </div>
         </div>

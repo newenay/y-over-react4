@@ -19,36 +19,21 @@
 #banner_logo {
     width: 50px;
     height: 50px;
+    margin-right: 10px;
 }
 
 #mainMenu .leftHeader h6 {   
-    padding: 5px 0 0 10px;
     color: rgb(148, 54, 124);
 }
 
-/* Should move this to top menu */
 #topBanner{
     position: relative;
-    top: 35px;
-    /* width: 1000px;
-    z-index: 1; */
-    /* margin: auto;
-    align-content: center; */
-}
-
-#mainMenu h1{
-	font-size: 20px;
-	font-weight: normal;
-	color: #FFCC00;
-	padding:  2px 0 0 10px;
-    text-shadow: 2px 2px 2px #333;
+    top: 32px;
 }
 
 #mainMenu .leftHeader {
-    width: 450px;
-    /* min-width: 300px; */
-   /*  background-color: purple; */
-   background-image: url("./line.png");
+    width: 440px;
+    background-image: url("./line.png");
     /* background-repeat: repeat-x; */
 }
 
@@ -58,7 +43,7 @@
 }
 
 #mainMenu .rightHeader {
-    width: 450px;
+    width: 480px;
     background-image: url("./line.png");
 }
 

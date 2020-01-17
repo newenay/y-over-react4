@@ -22,23 +22,19 @@ body {
 }
 
 h1 {
-    font-weight: normal;
-    padding:  5px 0 0 5px;
+    font-size: 20px;
+	color: #FFCC00;
     text-shadow: 2px 2px 2px #333;
 }
 
 h2 { /* for titles */
-    color: rgb(228, 120, 20);
-    text-align: left;
-    /* padding:  15px 0 0 20px; */
-    text-shadow: 2px 2px 2px #333;
     font-size: 30px;
+    color: rgb(228, 120, 20);
+    text-shadow: 2px 2px 2px #333;
 }
 
 h6 {
     color: rgba(76, 153, 4, 0.699);
-    text-align: center;
-    margin-bottom: 15; /* for UNCLASSIFIED */
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
 }
 
@@ -60,13 +56,13 @@ ul {
     margin-top: 0;
     margin-bottom: 0;
     padding: 0;
-    font-size: 0;
 }
 
 #root li {
-    margin-bottom: 5px;
-    vertical-align: top;
     font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
 }
 
 video {

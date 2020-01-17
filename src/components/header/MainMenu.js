@@ -35,7 +35,7 @@ const MainMenu = (props) => {
 
   
   return (  
-    <div className="wrapper">    
+    <div className="wrapper justify-content-around">    
       <Link className="linkAdj" to='/help'>
         <span aria-label='Help' role='img'>&#9072; Help</span>
       </Link>

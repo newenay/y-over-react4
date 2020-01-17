@@ -16,18 +16,17 @@
 }
 
 #lessonMenu .bottomLeftHeader {
-    width: 600px;
-    /* overflow: auto; */
+    width: 440px;
 }
 
 #lessonMenu .bottomMidHeader {
-    width: 1px;
+    width: 100px;
     /* z-index: -2; */
-    background-color: darkgray;
+    /* background-color: darkgray; */
 }
  /********* SlideNav *********/
 #lessonMenu .bottomRightHeader {
-    width: 400px;
+    width: 480px;
 }
 
 .bottomRightHeader button {
@@ -83,38 +82,35 @@
 
 .slideIndicator{
   background: #ffffff;
-  padding: 4px;
+  padding: 3px;
   font-size: 12px;
   border-radius: 10px;
   opacity: 0.9;
   filter: alpha(opacity=90);
 }
+
 /********* SlideMenu *********/
 .control-buttons {
-  display: flex; 
+  display: flex-wrap; 
   flex-shrink: 0; /* ie fix for buttons squishing */
   justify-content: flex-start;
-  
 }
 
 /* SlideBtn */
 .bottomLeftHeader button {
+  width: 10px;
+  height: 17px;
   border: 1px solid rgb(90,91,158);
-  /* background: rgb(235, 192, 23); */
-  /*flex-basis: 48%;  stretches to fill the space */
-  /* display: inline-block; */
   line-height: 0; /* height */
-  /* text-decoration: none; */
-  padding: 12px 2px 11px 2px;
+  padding: 0px 2px 0px 2px;
   text-align: center;
   font-size: 10px;
   color: rgb(46, 46, 46);
   transition: all 0.2s;
-  /* box-sizing: padding-box; */
   
   /* ie fixes */
   float: left; 
-  min-width: 18px;
+  min-width: 21px;
 
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#916800+0,e8993a+15,f4d77f+45,e8993a+74,916800+100 */
   background: #916800; /* Old browsers */

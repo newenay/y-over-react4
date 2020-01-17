@@ -114,7 +114,7 @@ const SlideNav  = (props) => {
   let _exam = Boolean(props.slideInfo[_currentSlide].layout === 5)
 
   return (
-    <div className='d-flex'>
+    <div className='d-flex justify-content-around'>
       <div>
         <span className='slideIndicator' >&nbsp;<b>Slide {_currentSlide+1} of {props.slideInfo.length}</b>&nbsp;</span>&nbsp;
       </div>

@@ -61,15 +61,20 @@
 /* Bullet text HTML Object */
 .dangerousBullet {
     padding:  5px; /*8*/
-    line-height: 100%;
+    line-height: 135%;
     margin: 0;
-    /* text-indent: 25px; */
     font-size: 16px;
-    /* width: 356px */
 }
 
-.dangerousBullet ul {
-    margin-left: 50px; /* override index.css */
+.dangerousBullet p { /* override index.css */
+    margin: 0; 
+    padding: 0;
+    line-height: 135%;
+}
+
+.dangerousBullet ul { /* override index.css */
+    margin-left: 50px;
+    margin-top: -7px; 
 }
 
 .audioTimer {

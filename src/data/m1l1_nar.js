@@ -29,12 +29,12 @@ const slideBullets = {
     },
     {
       "graphic": '/images/m1l1/Kirchner_1913_Street_Berlin_1.png',
-      "text":"Symbol of modernity and of the metropolis of Berlin",
+      "text":"<p>Symbol of modernity and of the metropolis of Berlin afgsdfgsfsfgsfgsdfg</p>",
       "time": "26"
     },
     {
       "graphic": '/images/m1l1/Kirchner_1913_Street_Berlin.png',
-      "text":"Intimacy offset by isolation",
+      "text":"Intimacy offset by isolation fgklajdfklajdfklajdfklajdfklajsdflkadjflakdfj",
       "time": "42"
     },
     {
@@ -152,6 +152,230 @@ const slideBullets = {
     },
   ],
   "m1l1f07":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f08":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f09":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f10":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f11":[
+    {
+      "graphic": false,
+      "text": "Here is some text!",
+      "time": "1"
+    },
+  ],
+  "m1l1f12":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f13":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f14":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f15":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f16":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f17":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f18":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f19":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f20":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f21":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f22":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f23":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f24":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f25":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f26":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f27":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f28":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f30":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f31":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f32":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f33":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f34":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f35":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f36":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f37":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f38":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f39":[
+    {
+      "graphic": false,
+      "text": false,
+      "time": "1"
+    },
+  ],
+  "m1l1f40":[
     {
       "graphic": false,
       "text": false,

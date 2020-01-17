@@ -7,7 +7,7 @@
 import React, {PureComponent} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import './AudioPlayer.css'
+import './AudioPlayer.css';
 
 class AudioPlayer extends PureComponent {
   constructor(props){
@@ -19,7 +19,6 @@ class AudioPlayer extends PureComponent {
     };
 
     this.audioRef = React.createRef(); //prevent invariant() violation
-
     this.canvasRef = React.createRef();
     //var canvas, ctx, source, context, analyser, fbc_array;
 
@@ -29,6 +28,8 @@ class AudioPlayer extends PureComponent {
     this.handleMediaEnd = this.handleMediaEnd.bind(this);
     this.pauseEvent = this.pauseEvent.bind(this);
     this.playEvent = this.playEvent.bind(this);
+    this.initGraphicEQ = this.initGraphicEQ.bind(this);
+    this.loopGraphicEQ = this.loopGraphicEQ.bind(this);   
   }
 
   componentDidMount() {    
@@ -40,11 +41,12 @@ class AudioPlayer extends PureComponent {
     node.addEventListener('ended', this.handleMediaEnd);
     node.addEventListener('pause', this.pauseEvent);
     node.addEventListener('play', this.playEvent);
-
     this.updateIsPlaying();
     this.props.audioEvents(true, false); // stream avail, ended
     
-    this.initMp3Player();
+    const isIE = false || !!document.documentMode; // detect IE 6-11 -- No AudioContext() Support
+    if(!isIE)
+      this.initGraphicEQ(); //also works on initAudio --> updateIsPlaying()
   }
 
   componentDidUpdate(prevProps) {
@@ -70,9 +72,13 @@ class AudioPlayer extends PureComponent {
     node.removeEventListener('ended', this.handleMediaEnd);
     node.removeEventListener('pause', this.pauseEvent);
     node.removeEventListener('play', this.playEvent);
-
     /* this.debugConsole('Audio Event - componentWillUnMount()', node, this) */
     this.props.audioEvents(false, false); // stream avail, ended
+    
+    // Graphic EQ cleanup
+    /* this.source.disconnect();
+    this.analyser.disconnect();
+    window.cancelAnimationFrame( this.loopGraphicEQ ); */
   }
 
   debugConsole = (...msgArr) => {
@@ -82,31 +88,35 @@ class AudioPlayer extends PureComponent {
   }
 
   /* Graphic Audio API bars - Init */
-  initMp3Player(){
+  initGraphicEQ(){
     var node = ReactDOM.findDOMNode(this.audioRef.current);
-    
+
+    var AudioContext = window.AudioContext || window.webkitAudioContext; // xBrowser -- Firefox/Opera uses webkit?
     this.context = new AudioContext(); // AudioContext object instance
     this.analyser = this.context.createAnalyser(); // AnalyserNode method
     // Re-route audio playback into the processing graph of the AudioContext
+    this.fbc_array = new Uint8Array(this.analyser.frequencyBinCount);
     this.source = this.context.createMediaElementSource(node); 
     this.source.connect(this.analyser);
     this.analyser.connect(this.context.destination);
-    
+
     this.canvas = this.canvasRef.current
     this.ctx = this.canvas.getContext('2d');
+
+    window.requestAnimationFrame( this.loopGraphicEQ );
   }
 
   // Looping at the default frame rate that the browser provides(approx. 60 FPS)
-  frameLooper() {
-    this.fbc_array = new Uint8Array(this.analyser.frequencyBinCount);
+  loopGraphicEQ() {
+    window.requestAnimationFrame( this.loopGraphicEQ );
     this.analyser.getByteFrequencyData(this.fbc_array);
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height); // Clear the canvas
-    this.ctx.fillStyle = '#FFCC00'; // Color of the bars
+    this.ctx.fillStyle = 'rgb(148, 54, 124)'; //Orange - 'rgb(228, 120, 20, 0.75)';  Color of the bars
     var bars = 100;
     
     for (var i = 0; i < bars; i++) {
       var bar_x = i * 3;
-      var bar_width = 2;
+      var bar_width = 1;
       var bar_height = -(this.fbc_array[i] / 2);
       
       //  fillRect( x, y, width, height ) // Explanation of the parameters below
@@ -167,7 +177,7 @@ class AudioPlayer extends PureComponent {
         supposedCurrentTime: currentTime
       });
     }
-    this.frameLooper();
+    //this.loopGraphicEQ();
   }
 
   // Works but clicking seek does fire a pause event (no known fix), and breaks REWIND feature
@@ -234,6 +244,7 @@ class AudioPlayer extends PureComponent {
     } else {
       node.pause();
     }
+    //this.initGraphicEQ();
   }
 
   /* Can replace with direct access to <audio> play btn */
