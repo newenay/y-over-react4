@@ -15,7 +15,8 @@ class Stage extends PureComponent {
     super(props);
     
     this.state = {    
-      showPopup: false
+      showPopup: false,
+      showNarr: false
     };
     this.getSlideIndex_IE = this.getSlideIndex_IE.bind(this);
     this.cuePointFwd = this.cuePointFwd.bind(this);
@@ -75,6 +76,17 @@ class Stage extends PureComponent {
     });
   }
 
+  showNarr(){
+    var flyoutMenu = document.querySelector("#narrContainer")
+    flyoutMenu.classList.add("show");      
+  }
+
+  hideNarr(e){
+    var flyoutMenu = document.querySelector("#narrContainer")
+    flyoutMenu.classList.remove("show"); 
+    e.stopPropagation();     
+  }
+
   // Don't use in a form submission, or will open up to cross-scripting (XSS) attack
   createMarkup(_jsonStr){
     return{ __html: _jsonStr }
@@ -124,7 +136,7 @@ class Stage extends PureComponent {
 
     return (
       <div id='stageContainer'>
-        <div id="container">
+        <div id="slideContainer">
          {/*  <div id='topBanner'><h6>Unclassified</h6></div> */}
           
           {/* RENDER LAYOUT */}
@@ -133,8 +145,13 @@ class Stage extends PureComponent {
 
           {/************* STAGE CONTROLS *************/}
           <div id='more' className='d-flex justify-content-between'>
-
-            <div id='right'>
+         
+            <div id='right'>   
+              <button id='optBtnSkin' onClick={this.showNarr.bind(this)}>Open Narration</button>
+              {this.state.showPopup ? 
+                <Popup htmlOptTxt={htmlOptTxt} {...this.props} closePopup={this.togglePopup.bind(this)} />
+              : null}
+              {/* <div dangerouslySetInnerHTML={this.createMarkup(slide.optionalTxt)} /> */}
               &nbsp;{optTextBtn}
             </div>
 
@@ -147,17 +164,12 @@ class Stage extends PureComponent {
             </span>
           </div>
           
-        </div>  
-
+        </div> 
         {/************* NARRATION ************/}
-        <div id='bottom-section' style={{background: 'white'}}>
-          {this.state.showPopup ? 
-            <Popup htmlOptTxt={htmlOptTxt} {...this.props} closePopup={this.togglePopup.bind(this)} />
-          : null}
-          {/* <div dangerouslySetInnerHTML={this.createMarkup(slide.optionalTxt)} /> */}
+        <div id='narrContainer'>
+          <button id='optBtnSkin' onClick={this.hideNarr.bind(this)}>Close Narration</button>
           <div dangerouslySetInnerHTML={htmlNar} /><br />
         </div>
-        
       </div>
     )
   }

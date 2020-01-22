@@ -54,7 +54,6 @@
   }
 
   .dd-list {
-    z-index: 10;
     position: absolute;
     width: auto;
     border: 1px solid #dfdfdf;

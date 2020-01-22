@@ -69,9 +69,7 @@ class Main extends PureComponent {
   debugHelpers() {
     if(this.props.slideControls.debug){
       return(
-        <div>
           <Debugger {...this.props} />
-        </div>
       )
     }
   }
@@ -132,40 +130,43 @@ class Main extends PureComponent {
 
     return (
       <div>
-        <div>
+        <div className="headerObj">
           <Header {...this.props} />
         </div>
     
-        <Switch>
-          <Route 
-            path={`${this.props.match.url}view/:slideId`} 
-            /* component={Stage} */
-            render={ ({match}) =>
-            <Stage {...this.props}
-              ref={this.StageRef}
-              match={match} 
-              scoComplete={this.scoComplete.bind(this)}
-            />}
-          />
-          <Route exact path='/' 
-            render={() => 
-            <PlaceHolder {...this.props} 
-              setBookmark={this.setBookmark.bind(this)}
-            />} 
-          />
-          <Route path='/help'><Help {...this.props} /></Route>
-          <Route render={()=>(<h1>No slide found, check lesson URL</h1>)} />
-        </Switch>
-    
-        <div>
+        <div className="stageObj">
+          <Switch>
+            <Route 
+              path={`${this.props.match.url}view/:slideId`} 
+              /* component={Stage} */
+              render={ ({match}) =>
+              <Stage {...this.props}
+                ref={this.StageRef}
+                match={match} 
+                scoComplete={this.scoComplete.bind(this)}
+              />}
+            />
+            <Route exact path='/' 
+              render={() => 
+              <PlaceHolder {...this.props} 
+                setBookmark={this.setBookmark.bind(this)}
+              />} 
+            />
+            <Route path='/help'><Help {...this.props} /></Route>
+            <Route render={()=>(<h1>No slide found, check lesson URL</h1>)} />
+          </Switch>
+        </div>
+
+        <div className="footerObj">
           <Footer {...this.props} 
             handleSlideRewind={this.handleSlideRewind.bind(this)} 
             handleSlidePlay={this.handleSlidePlay.bind(this)} 
             setBookmark={this.setBookmark.bind(this)}
           />
           {/* Took off 'exact' (see inclusive vs exclusive routing), which means everything shows */}
+          {this.debugHelpers()}
         </div>
-        {this.debugHelpers()}
+        
       </div>
     );
   }

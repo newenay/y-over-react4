@@ -29,6 +29,14 @@ const SlideNav  = (props) => {
     }
   }
 
+  function renderNarrBtn() {
+      return(
+            <button onClick={() => handleNarrClick(_currentSlide)} title='Narration'>
+              <span aria-label='Narration' role='img'><strong>cc</strong></span>
+            </button>
+      );
+    }
+
   function renderBackBtn() {
     /* console.log('1.) renderBackBtn()') */
     if(_currentSlide === 0){
@@ -53,6 +61,10 @@ const SlideNav  = (props) => {
     props.loadSlide(n, incrementSlide, _bookmark)
     props.setBookmark(_bookmark)
     props.handleSlideRewind()
+  }
+
+  function handleNarrClick() {
+    /* akldfjkld */
   }
 
   function handleRewindClick(){
@@ -120,6 +132,7 @@ const SlideNav  = (props) => {
       </div>
       <div>
         {renderLockBtn()}
+        {renderNarrBtn()}
         {/* https://www.w3schools.com/csS/tryit.asp?filename=trycss_buttons_animate1 */}
         {renderBackBtn()}
 
