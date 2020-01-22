@@ -10,7 +10,7 @@
 }
 
 #mainMenu {
-    width: 1020px;
+    width: 1000px;
     height: 70px;
     padding: 0px;
     margin: 0 auto;
@@ -43,7 +43,7 @@
 }
 
 #mainMenu .rightHeader {
-    width: 480px;
+    width: 460px;
     background-image: url("./line.png");
 }
 

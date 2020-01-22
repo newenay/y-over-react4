@@ -13,7 +13,7 @@ import examQuestions from './data/m1l1_exam'
 // App State
 const slideControls = {
 
-  debug: false, 
+  debug: true, 
   currentLesson: 0,
   locked: true, // for icon to show, debug must be true
   play: true, // Play Btn - default position unpaused

@@ -137,34 +137,35 @@ class Stage extends PureComponent {
     return (
       <div id='stageContainer'>
         <div id="slideContainer">
-         {/*  <div id='topBanner'><h6>Unclassified</h6></div> */}
           
           {/* RENDER LAYOUT */}
           {this.checkLayoutType(slide, _slideBullets, _cuePoint)}
           {this.debugConsole('Slide', i,',', slide.id, '--> _cuePoint:', _cuePoint)}
 
-          {/************* STAGE CONTROLS *************/}
-          <div id='more' className='d-flex justify-content-between'>
-         
-            <div id='right'>   
-              <button id='optBtnSkin' onClick={this.showNarr.bind(this)}>Open Narration</button>
-              {this.state.showPopup ? 
+          {/************* POP UP *************/}
+          {this.state.showPopup ? 
                 <Popup htmlOptTxt={htmlOptTxt} {...this.props} closePopup={this.togglePopup.bind(this)} />
               : null}
+
+          {/************* STAGE CONTROLS *************/}
+          <div id='more' className='d-flex justify-content-between'>
+            <div id='right'>   
+              <button id='optBtnSkin' onClick={this.showNarr.bind(this)}>Open Narration</button>
+              
               {/* <div dangerouslySetInnerHTML={this.createMarkup(slide.optionalTxt)} /> */}
               &nbsp;{optTextBtn}
             </div>
 
             {this.debugHelpers(_cuePoint, allBullets.length)}
 
-            <span className='audioSkin'>
+            <span>
               {/* <ErrorBoundary> */}
                 {this.checkAudioSource(slide.audio, audioSrc, _cuePoint, allBullets)}
               {/* </ErrorBoundary> */}
             </span>
           </div>
-          
         </div> 
+
         {/************* NARRATION ************/}
         <div id='narrContainer'>
           <button id='optBtnSkin' onClick={this.hideNarr.bind(this)}>Close Narration</button>
