@@ -76,15 +76,18 @@ class Stage extends PureComponent {
     });
   }
 
-  showNarr(){
+  toggleNarr(){
     var flyoutMenu = document.querySelector("#narrContainer")
-    flyoutMenu.classList.add("show");      
-  }
+    if (!this.state.showNarr){
+      flyoutMenu.classList.add("show");
+    }else{
+      flyoutMenu.classList.remove("show"); 
+      /* e.stopPropagation(); */
+    }
 
-  hideNarr(e){
-    var flyoutMenu = document.querySelector("#narrContainer")
-    flyoutMenu.classList.remove("show"); 
-    e.stopPropagation();     
+    this.setState({
+      showNarr: !this.state.showNarr
+    });
   }
 
   // Don't use in a form submission, or will open up to cross-scripting (XSS) attack
@@ -150,7 +153,7 @@ class Stage extends PureComponent {
           {/************* STAGE CONTROLS *************/}
           <div id='more' className='d-flex justify-content-between'>
             <div id='right'>   
-              <button id='optBtnSkin' onClick={this.showNarr.bind(this)}>Open Narration</button>
+              {/* <button id='optBtnSkin' onClick={this.showNarr.bind(this)}>Open Narration</button> */}
               
               {/* <div dangerouslySetInnerHTML={this.createMarkup(slide.optionalTxt)} /> */}
               &nbsp;{optTextBtn}
@@ -168,7 +171,7 @@ class Stage extends PureComponent {
 
         {/************* NARRATION ************/}
         <div id='narrContainer'>
-          <button id='optBtnSkin' onClick={this.hideNarr.bind(this)}>Close Narration</button>
+          {/* <button id='optBtnSkin' onClick={this.hideNarr.bind(this)}>Close Narration</button> */}
           <div dangerouslySetInnerHTML={htmlNar} /><br />
         </div>
       </div>

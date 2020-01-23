@@ -29,14 +29,6 @@ const SlideNav  = (props) => {
     }
   }
 
-  function renderNarrBtn() {
-      return(
-            <button onClick={() => handleNarrClick(_currentSlide)} title='Narration'>
-              <span aria-label='Narration' role='img'><strong>cc</strong></span>
-            </button>
-      );
-    }
-
   function renderBackBtn() {
     /* console.log('1.) renderBackBtn()') */
     if(_currentSlide === 0){
@@ -63,11 +55,7 @@ const SlideNav  = (props) => {
     props.handleSlideRewind()
   }
 
-  function handleNarrClick() {
-    /* akldfjkld */
-  }
-
-  function handleRewindClick(){
+  function handleRewindClick() {
     props.handleSlideRewind()
     /* resets play btn if paused */
     if(!props.slideControls.play){ handlePlayClick() }
@@ -132,12 +120,14 @@ const SlideNav  = (props) => {
       </div>
       <div>
         {renderLockBtn()}
-        {renderNarrBtn()}
+        <button onClick={() => props.handleSlideNarr()} title='Narration'>
+          <span aria-label='Narration' role='img'><strong>cc</strong></span>
+        </button>
         {/* https://www.w3schools.com/csS/tryit.asp?filename=trycss_buttons_animate1 */}
         {renderBackBtn()}
 
         <button onClick={() => handleRewindClick()} title='Rewind'>
-            <span aria-label='Rewind' role='img'>{/* &#9851; */}&#9198;</span>
+          <span aria-label='Rewind' role='img'>{/* &#9851; */}&#9198;</span>
         </button> 
         
         {renderPlayBtn(props.slideControls.play, props.slideControls.audioEnd)}

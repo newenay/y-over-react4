@@ -21,6 +21,7 @@ class Main extends PureComponent {
     this._scormObj = window.gnScormSessionState // 0 (none), 1 (Initiated), 2 (Terminating)
     
     this.handleSlideRewind = this.handleSlideRewind.bind(this);
+    this.handleSlideNarr = this.handleSlideNarr.bind(this);
     this.handleSlidePlay = this.handleSlidePlay.bind(this);
     this.debugConsole = this.debugConsole.bind(this);
     this.debugHelpers = this.debugHelpers.bind(this);
@@ -37,6 +38,14 @@ class Main extends PureComponent {
   handleSlideRewind() {
     if(this.StageRef.current) {
       this.StageRef.current.resetSlideCues();
+    }else{
+      this.debugConsole('stage slide not yet mounted')
+    }
+  } 
+
+  handleSlideNarr() {
+    if(this.StageRef.current) {
+      this.StageRef.current.toggleNarr();
     }else{
       this.debugConsole('stage slide not yet mounted')
     }
@@ -159,7 +168,8 @@ class Main extends PureComponent {
 
         <div className="footerObj">
           <Footer {...this.props} 
-            handleSlideRewind={this.handleSlideRewind.bind(this)} 
+            handleSlideRewind={this.handleSlideRewind.bind(this)}
+            handleSlideNarr={this.handleSlideNarr.bind(this)} 
             handleSlidePlay={this.handleSlidePlay.bind(this)} 
             setBookmark={this.setBookmark.bind(this)}
           />
