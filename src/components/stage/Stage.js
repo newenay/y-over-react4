@@ -152,9 +152,7 @@ class Stage extends PureComponent {
 
           {/************* STAGE CONTROLS *************/}
           <div id='more' className='d-flex justify-content-between'>
-            <div id='right'>   
-              {/* <button id='optBtnSkin' onClick={this.showNarr.bind(this)}>Open Narration</button> */}
-              
+            <div id='right'>               
               {/* <div dangerouslySetInnerHTML={this.createMarkup(slide.optionalTxt)} /> */}
               &nbsp;{optTextBtn}
             </div>
@@ -171,7 +169,6 @@ class Stage extends PureComponent {
 
         {/************* NARRATION ************/}
         <div id='narrContainer'>
-          {/* <button id='optBtnSkin' onClick={this.hideNarr.bind(this)}>Close Narration</button> */}
           <div dangerouslySetInnerHTML={htmlNar} /><br />
         </div>
       </div>

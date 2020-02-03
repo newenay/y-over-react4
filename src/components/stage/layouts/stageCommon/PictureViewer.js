@@ -1,6 +1,7 @@
 import React from 'react'
 import './PictureViewer.css'
 import '../../utilities/loader.css'
+import FlashObject from './FlashObject'
 
 const PictureViewer = (props) => {
   
@@ -33,6 +34,11 @@ const PictureViewer = (props) => {
                     <source src={_source} type="video/mp4" />
                     Your brower does not support the video tag.
                 </video>;
+
+        case 'html':
+          return <FlashObject _data={_source} />;
+
+
         default:
           return null;
       }

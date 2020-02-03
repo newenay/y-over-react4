@@ -15,7 +15,7 @@ const slideControls = {
 
   debug: true, 
   currentLesson: 0,
-  locked: true, // for icon to show, debug must be true
+  locked: false, // for icon to show, debug must be true
   play: true, // Play Btn - default position unpaused
   audioStream: false,
   audioEnd: false,

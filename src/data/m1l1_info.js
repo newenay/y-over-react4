@@ -64,10 +64,10 @@ const slideInfo = [
   },
   {
     "id": "m1l1f08",
-    "title": 'Dummy Frame',
+    "title": 'Adobe Animate Files',
     "narration": "<p>Dummy Frame</p>",
     "cuePoint": 0,
-    "layout": 1,
+    "layout": 0,
     "optionalTxt": false,
     "audio": false,
   },

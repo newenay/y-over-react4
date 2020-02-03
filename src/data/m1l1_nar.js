@@ -160,7 +160,7 @@ const slideBullets = {
   ],
   "m1l1f08":[
     {
-      "graphic": false,
+      "graphic": "/images/m1l1/ball_test/ball_test.html",
       "text": false,
       "time": "1"
     },
