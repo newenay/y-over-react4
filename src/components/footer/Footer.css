@@ -33,7 +33,7 @@
   /* display: inline-block; */
   width: 35px;
   height: 35px;
-  border: 1px solid rgb(8, 71, 95);
+  border: 1px solid #08475f;
   margin-left: 0px;
   margin-right: 0px;
   padding: .2em;
@@ -89,12 +89,16 @@
   justify-content: center;
 
   background: rgb(184, 198, 210);
-  padding: 0px;
+  padding: 2px;
   font-size: 12px;
   border-radius: 10px;
   opacity: 0.9;
   filter: alpha(opacity=90);
-  height: 17px;
+  height: 19px;
+
+  -moz-box-shadow: inset 0 7px 5px -5px 000;
+  -webkit-box-shadow: inset 0 7px 5px -5px #000;
+  box-shadow: inset 0 7px 5px -5px #000;
 }
 
 /********* SlideMenu *********/

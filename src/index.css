@@ -38,12 +38,13 @@ body {
 .stageObj {
     position: relative;
     z-index: 1;
+    background-color: #eee;
 }
 
 h1 {
     font-size: 20px;
-	color: #FFFFFF;
-    text-shadow: 2px 2px 2px #333;
+	color: rgb(247, 232, 234);
+    text-shadow: 2px 2px 2px #111;
 }
 
 h2 { /* for titles */
@@ -56,7 +57,7 @@ h2 { /* for titles */
 
 h6 {
     color: rgb(102, 187, 23);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+    text-shadow: 1px 1px 1px #111;
 }
 
 p {

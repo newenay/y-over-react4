@@ -1,0 +1,49 @@
+_________ WELCOME TO THE MATRIX _________
+
+1.) to START SERVER from the command line:
+    a.) type cmd in window's start menu
+    b.) type "cd desktop/test_envir4/y-over-react4" + enter
+    c.) you should now be in the correct directory, type "npm start" + enter
+    d.) wait patiently for server to start (in your default browser, chrome preferred). You can now copy & paste "localhost:3000/#" into any browser you wish.
+
+    Breath, you're doing great!
+
+___________ CREATE NEW LESSON ___________
+
+1.) Replace "public/images/banner_logo.png" with your logo (will display at 50px X 50px)
+
+2.) Replace intro video, lesson graphics & audio elements
+    a.) Replace "public/video/Lorem_Ipsum_640x360p.mp4" with your intro video (640px X 360px)
+    b.) Replace images in "public/images/m1l1/..." per your lesson or create new module/lesson (ie: m2l1/someGraphic.png)
+    c.) Replace images in "public/audio/m1l1/m1l1f01.mp3" (audio name must relect Slide ID in m1l1_info.js [see below])
+
+3.) Lesson Data --> Replace data in:
+    ○ "src/data/m1l1_nar.js" (cue points and timing for bullets and graphics)
+    ○ "src/data/m1l1_info.js" (slideId, title, narration, & optional text)
+    ○ "src/data/m1l1_exam.js" (exam and checks on learning slides)
+
+4.) Data gets compliled into one store --> Since Redux can only have one "scr/store.js" (compiled Lesson Data), only one lesson can be viewed at a time.  Future upgrades will expand abilities to create multi-Lesson CD/Web product (as per lesson menu option).
+    Within store.js (to change lesson):
+        ○ import slideBullets from './data/m2l1_nar'
+        ○ import slideInfo from './data/m2l1_info'
+        ○ import examQuestions from './data/m2l1_exam'
+        ______________________________
+
+    slideControls:
+        ○ debug: true, // turns on debugger and console traces (*also lesson menu - not active, but will switch lesson[])
+        ○ currentLesson: 0, // determines with lesson in lessons[] array (below)
+        ○ locked: true, // unlock course Nav
+        ...
+        ○ lessons[] // lesson name will appear in header (see below)
+
+5.) Change Course name is hard coded in the "src/components/header/header.js"
+
+_____________ TO PUBLISH _____________
+
+1.) to Publish, close out all server windows:
+    a.) type cmd in window's start menu
+    b.) type "cd desktop/test_envir4/y-over-react4" + enter
+    c.) you should now be in the correct directory, type "npm build" + enter
+    d.) wait patiently for you lesson to publish (with publish to 'y-over-react4/build' folder within the project directory)
+
+    e.) *Keep in mind if you switch lessons the build folder overwrites previous each time, so move to ie: "y-over-react/published/m1l1" folder

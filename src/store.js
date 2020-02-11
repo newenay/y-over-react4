@@ -13,19 +13,20 @@ import examQuestions from './data/m1l1_exam'
 // App State
 const slideControls = {
 
-  debug: true, 
-  currentLesson: 0,
-  locked: true, // for icon to show, debug must be true
+  debug: true, // turns on debugger and console traces (*also lesson menu - not active, but will switch lesson[])
+  currentLesson: 0, // determines with lesson in lessons[] array (below)
+  locked: true, // unlock course Nav -- for icon to show, debug must be true
+  
   play: true, // Play Btn - default position unpaused
-  audioStream: false,
-  audioEnd: false,
+  audioStream: false, // Is audio playing
+  audioEnd: false, // Is audio complete
   timeSync: NaN, // default position unpaused
   singleton: false, //loads bookmark or first slide
   lessons: [
     {
       id: 0,
       path: 'm1l1',
-      name: "German Expressionism",
+      name: "Personnel Recovery",
       currentSlide: 0,
       bookmark: 0,
       completed: false

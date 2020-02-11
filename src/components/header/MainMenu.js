@@ -40,9 +40,9 @@ const MainMenu = (props) => {
       <div className="linkAdj">
         <Link  to='/help'>
           <span aria-label='Help' role='img'>&#9072; Help</span>
-        </Link>
+        </Link>|
         <a href={process.env.PUBLIC_URL + "/xtras/resources.html"} target="blank">
-          <span aria-label='Resources' role='img'>&#128218; Resources</span></a>
+          <span aria-label='Resources' role='img'>&#128218; Resources</span></a>|
         <a href={process.env.PUBLIC_URL + "/xtras/glossary.html"} target="blank">
           <span aria-label='Glossary' role='img'> &#128366; Glossary</span></a>  
       </div>       

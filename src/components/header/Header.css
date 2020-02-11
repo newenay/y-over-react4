@@ -23,9 +23,14 @@
     margin-top: 3px;
 }
 
+#banner_titles {
+    margin-top: 4px;
+}
+
 #mainMenu .leftHeader h6 {   
     color: rgb(242, 214, 174);
     font-family: 'Roboto Condensed', sans-serif;
+    line-height: .5;
 }
 
 #topBanner{
@@ -72,5 +77,5 @@
     position: relative;
     top: 5px;
     margin-left: auto;
-    color: red;
+    color: rgb(8, 71, 95);
 }
