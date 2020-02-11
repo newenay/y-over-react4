@@ -35,15 +35,17 @@ const MainMenu = (props) => {
 
   
   return (  
-    <div className="wrapper justify-content-around">    
-      <Link className="linkAdj" to='/help'>
-        <span aria-label='Help' role='img'>&#9072; Help</span>
-      </Link>
-      <a className="linkAdj" href={process.env.PUBLIC_URL + "/xtras/resources.html"} target="blank">
-        <span aria-label='Resources' role='img'>&#128218; Resources</span></a>
-      <a className="linkAdj" href={process.env.PUBLIC_URL + "/xtras/glossary.html"} target="blank">
-        <span aria-label='Glossary' role='img'> &#128366; Glossary</span></a>
-      <div>{debugHelpers()}</div>        
+    <div className="p-2 rightHeader"/* className="wrapper justify-content-around" */>    
+      <div>{debugHelpers()}</div>
+      <div className="linkAdj">
+        <Link  to='/help'>
+          <span aria-label='Help' role='img'>&#9072; Help</span>
+        </Link>
+        <a href={process.env.PUBLIC_URL + "/xtras/resources.html"} target="blank">
+          <span aria-label='Resources' role='img'>&#128218; Resources</span></a>
+        <a href={process.env.PUBLIC_URL + "/xtras/glossary.html"} target="blank">
+          <span aria-label='Glossary' role='img'> &#128366; Glossary</span></a>  
+      </div>       
     </div>
   );
 }

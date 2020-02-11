@@ -1,15 +1,13 @@
 /* rightHeader wrapper width=45%*/
 .wrapper {
-  position: relative;
-  top: 30px;
-  display: flex;
-  display: -webkit-box;
+  margin-left: auto;
+  /* display: -webkit-box;
   display: -ms-flexbox;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-    /* width: 100%; */
-  }
+  width: 100%; */
+}
 
   .dd-wrapper {
     -webkit-user-select: none;
@@ -18,7 +16,7 @@
             user-select: none;
     /*position: relative;
      width: 200px; */
-  }
+}
 
   .dd-header {
     display: -webkit-box;
@@ -54,6 +52,7 @@
   }
 
   .dd-list {
+    z-index: 10;
     position: absolute;
     width: auto;
     border: 1px solid #dfdfdf;
@@ -65,7 +64,7 @@
             box-shadow: 0 2px 5px -1px #e8e8e8;
     font-weight: 700;
     padding: 0px 0;
-    max-height: 215px;
+    max-height: 210px;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
   }

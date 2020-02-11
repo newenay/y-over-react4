@@ -23,8 +23,7 @@ const Header = (props) => {
                 </div>
                 <div className="p-2 middleHeader"><div id='topBanner'><h6>Unclassified</h6></div>  
                 </div>
-                <div className="p-2 rightHeader"><div><MainMenu {...props} /></div>
-                </div>
+                <MainMenu {...props} />
             </div>
         </div>
     );

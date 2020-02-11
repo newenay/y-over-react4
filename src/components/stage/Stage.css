@@ -8,7 +8,7 @@
 }
 
 #slideContainer {
-    background-color: lightgrey;
+    background-color: #eee;
     height: 100%;
     width: 1000px;
     margin: 0 auto;
@@ -63,7 +63,7 @@
  /****** Narration Window *****/
 #narrContainer {
     /* position: fixed; */ /* 'fixed' extend horiz */
-    background-color: #ffffff85; 
+    background-color: #ffffffe0; 
     height: 144px;
     width: 1000px;
     overflow: auto;

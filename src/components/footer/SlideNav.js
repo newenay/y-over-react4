@@ -114,11 +114,11 @@ const SlideNav  = (props) => {
   let _exam = Boolean(props.slideInfo[_currentSlide].layout === 5)
 
   return (
-    <div className='d-flex justify-content-around'>
-      <div>
-        <span className='slideIndicator' >&nbsp;<b>Slide {_currentSlide+1} of {props.slideInfo.length}</b>&nbsp;</span>&nbsp;
+    <div className="p-2 bottomRightHeader">
+      <div className='slideIndicator'>
+        <span>&nbsp;&nbsp;<b>Slide {_currentSlide+1} of {props.slideInfo.length}</b>&nbsp;</span>&nbsp;
       </div>
-      <div>
+      <div className='control-buttons'>
         {renderLockBtn()}
         <button onClick={() => props.handleSlideNarr()} title='Narration'>
           <span aria-label='Narration' role='img'><strong>cc</strong></span>

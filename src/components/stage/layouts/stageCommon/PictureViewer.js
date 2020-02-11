@@ -38,7 +38,6 @@ const PictureViewer = (props) => {
         case 'html':
           return <FlashObject _data={_source} />;
 
-
         default:
           return null;
       }

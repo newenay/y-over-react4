@@ -1,10 +1,11 @@
 import React from 'react'
-/*import './libs/createjs-2015.11.26.min.js'
-import './libs/ball_test.js' */
+/* import './libs/createjs-2015.11.26.min.js'
+import './ball_test.js' */
 
 const FlashObject = (props) => {
     
-    /* var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
+    /*var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation
+    let AdobeAn, createjs;
     
     function init() {
         canvas = document.getElementById("canvas");
@@ -69,15 +70,14 @@ const FlashObject = (props) => {
         fnStartAnimation();
     }
 
-    init(); */
+    init();  */
 
-    /* <div id="animation_container" style="background-color:rgba(255, 255, 255, 0); width:600px; height:440px">
+    return (
+        /*<div onLoad= {() => this.init()} id="animation_container" style="background-color:rgba(255, 255, 255, 0); width:600px; height:440px">
             <canvas id="canvas" width="600" height="440" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0.00);"></canvas>
             <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:600px; height:440px; position: absolute; left: 0px; top: 0px; display: block;">
             </div>
-	    </div> */
-
-    return (
+        </div>*/
         <object aria-label='animation' role='img' width="600" height="440" type="text/html" data={props._data} ></object>
     )
 }

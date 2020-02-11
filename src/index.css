@@ -3,14 +3,23 @@ html {
     width: 100%; /* see stage-#container, shadow possibly needs 20px? */
     min-width: 1020;
     /* margin: 0 auto; */
+
+    /* font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Montserrat', sans-serif; */
 }
     
 body {
-    background-color: #EEE;
-    font-family: Helvetica, Arial, "sans-serif";
+    background-color: lightgray;
+    /* font-family: Helvetica, Arial, "sans-serif"; 
+    font-family: 'Montserrat', sans-serif;*/
+    font-family: 'Roboto', sans-serif;
+    color: #2b2b2b;
     padding: 0; /* 25px works well */
     margin: 0;
-
     /* make all text unselectable */
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -33,24 +42,26 @@ body {
 
 h1 {
     font-size: 20px;
-	color: #FFCC00;
+	color: #FFFFFF;
     text-shadow: 2px 2px 2px #333;
 }
 
 h2 { /* for titles */
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
     font-size: 30px;
-    color: rgb(228, 120, 20);
-    text-shadow: 2px 2px 2px #333;
+    color: rgb(202, 76, 3);
+    /* text-shadow: 2px 2px 2px #333; */
 }
 
 h6 {
-    color: rgba(76, 153, 4, 0.699);
+    color: rgb(102, 187, 23);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
 }
 
 p {
     padding:  10px 10px 10px 10px;
-    line-height: 125%;
+    line-height: 23px;
     margin: 0;
     /* text-indent: 25px; */
     font-size: 16px;
@@ -104,6 +115,6 @@ button:hover, .btnBase:hover, button:focus,
 .debugger{
     display: flex;
     padding: 10px; 
-    background-color: #bceba1;
+    /* background-color: #bceba1; */
 
 }

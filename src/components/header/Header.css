@@ -2,11 +2,11 @@
 
 #mm_container {
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#9899d6+1,5a5b9e+12,9899d6+87,323656+97,323656+97,1a192b+100 */
-    background: rgb(152,153,214); /* Old browsers */
-    background: -moz-linear-gradient(top, rgba(152,153,214,1) 1%, rgba(90,91,158,1) 12%, rgba(152,153,214,1) 87%, rgba(50,54,86,1) 97%, rgba(50,54,86,1) 97%, rgba(26,25,43,1) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(152,153,214,1) 1%,rgba(90,91,158,1) 12%,rgba(152,153,214,1) 87%,rgba(50,54,86,1) 97%,rgba(50,54,86,1) 97%,rgba(26,25,43,1) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(152,153,214,1) 1%,rgba(90,91,158,1) 12%,rgba(152,153,214,1) 87%,rgba(50,54,86,1) 97%,rgba(50,54,86,1) 97%,rgba(26,25,43,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9899d6', endColorstr='#1a192b',GradientType=0 ); /* IE6-9 */
+    background: #3a6ca3; /* Old browsers - in b/w two colors */
+    background: -moz-linear-gradient(top, rgba(101,141,198,1) 1%, rgba(15,76,129,1) 7%, rgba(101,141,198,1) 93%, rgb(15,76,129,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(101,141,198,1) 1%,rgba(15,76,129,1) 7%,rgba(101,141,198,1) 93%,rgb(15,76,129,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(101,141,198,1) 1%,rgba(15,76,129,1) 7%,rgba(101,141,198,1) 93%, rgb(15,76,129,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#658dc6', endColorstr='#0f4c81',GradientType=0 ); /* IE6-9 */
 }
 
 #mainMenu {
@@ -19,11 +19,13 @@
 #banner_logo {
     width: 50px;
     height: 50px;
-    margin-right: 10px;
+    margin-right: 7px;
+    margin-top: 3px;
 }
 
 #mainMenu .leftHeader h6 {   
-    color: rgb(148, 54, 124);
+    color: rgb(242, 214, 174);
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 #topBanner{
@@ -33,25 +35,30 @@
 
 #mainMenu .leftHeader {
     width: 440px;
-    background-image: url("./line.png");
+    /* background-image: url("./line.png"); */
     /* background-repeat: repeat-x; */
 }
 
 #mainMenu .middleHeader { 
     width: 100px;
-    background-image: url("./line.png");
+    /* background-color: darkgray; */
+    /* background-image: url("./line.png"); */
 }
 
 #mainMenu .rightHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     width: 460px;
-    background-image: url("./line.png");
+    /* background-image: url("./line.png"); */
 }
 
 /* HyperLinks - Right Menu only */
 #mainMenu .rightHeader a:link, a:visited {
+    padding: 10px;
     text-decoration: none;
-    color: black;
-    opacity: 0.5;
+    color: #fff;
+    opacity: .85;
     filter: alpha(opacity=50);  /* for IE8 and earlier */
     cursor: pointer; 
 }
@@ -62,7 +69,8 @@
 }
 
 .linkAdj {
+    position: relative;
+    top: 5px;
+    margin-left: auto;
     color: red;
-    margin-top: 20;
-    padding: 0;
 }

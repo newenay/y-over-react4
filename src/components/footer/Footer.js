@@ -11,10 +11,9 @@ const Footer = (props) => {
                     <SlideMenu {...props} />
                 </div>
                 <div className="p-2 bottomMidHeader" ><h6>Unclassified</h6></div>
-                <div className="p-2 bottomRightHeader">
-                    {/* SlideActions is an action container that is connected to SlideControls component */}
-                    <SlideNav {...props} />
-                </div>
+ 
+                {/* SlideActions is an action container that is connected to SlideControls component */}
+                <SlideNav {...props} />
             </div>
         </div>
 
