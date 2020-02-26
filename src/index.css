@@ -3,19 +3,12 @@ html {
     width: 100%; /* see stage-#container, shadow possibly needs 20px? */
     min-width: 1020;
     /* margin: 0 auto; */
-
-    /* font-family: 'Roboto', sans-serif;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-family: 'Roboto Slab', serif;
-    font-family: 'Roboto Mono', monospace;
-    font-family: 'Oswald', sans-serif;
-    font-family: 'Montserrat', sans-serif; */
 }
     
 body {
     background-color: lightgray;
-    /* font-family: Helvetica, Arial, "sans-serif"; 
-    font-family: 'Montserrat', sans-serif;*/
+    /* font-family: Helvetica, Arial, "sans-serif"; */
+    /* font-family: 'Montserrat', sans-serif; */ 
     font-family: 'Roboto', sans-serif;
     color: #2b2b2b;
     padding: 0; /* 25px works well */
@@ -42,12 +35,13 @@ body {
 }
 
 h1 {
-    font-size: 20px;
+    font-size: 19px;
 	color: rgb(247, 232, 234);
     text-shadow: 2px 2px 2px #111;
 }
 
 h2 { /* for titles */
+    /* font-family: 'billabongregular', sans-serif; */
     font-family: 'Oswald', sans-serif;
     font-weight: bold;
     font-size: 30px;
@@ -56,6 +50,7 @@ h2 { /* for titles */
 }
 
 h6 {
+    font-family: 'Roboto Condensed', sans-serif;
     color: rgb(102, 187, 23);
     text-shadow: 1px 1px 1px #111;
 }

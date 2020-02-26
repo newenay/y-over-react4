@@ -11,7 +11,7 @@ const slideInfo = [
   {
     "id": "m1l1f02",
     "title": false,
-    "narration": "<p>This lesson provides the fundamentals of personnel recovery to guide DOD, interagency, coalition and contractor personnel who need to understand DOD personnel recovery. After completing this lesson, you will be able to:<ul><li>Identify the US Government’s approach to Personnel Recovery<li>Identify the DOD Personnel Recovery system</ul>,</p>",
+    "narration": "<p>This lesson provides the fundamentals of personnel recovery to guide DOD, interagency, coalition and contractor personnel who need to understand DOD personnel recovery. After completing this lesson, you will be able to:</p><ul><li>Identify the US Government’s approach to Personnel Recovery<li>Identify the DOD Personnel Recovery system</ul>",
     "cuePoint": 0,
     "layout": 0,
     "optionalTxt": false,
