@@ -28,3 +28,12 @@ yarn-error.log*
 /_src
 /_public
 
+public/logo192.png
+public/logo512.png
+public/robots.txt
+src/App.css
+src/App.js
+src/App.test.js
+src/components/stage/utilities/_Timer.js
+src/logo.svg
+src/serviceWorker.js
