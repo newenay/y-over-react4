@@ -16,7 +16,7 @@ const Header = (props) => {
                             <img id="banner_logo" src={process.env.PUBLIC_URL + "/images/banner_logo.png"} alt="#"/>
                         </Link>
                         <div id="banner_titles">
-                            <h1>PR 103 <small><i> - DOS PR Chief of Mission Envir (DSPRCE)</i></small></h1>
+                            <h1>Art 101 <small><i> - German Expressionism</i></small></h1>
                             <h6>Lesson: {props.slideControls.lessons[i].name}</h6>
                         </div>
                     </div>          

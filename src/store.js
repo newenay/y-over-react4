@@ -15,7 +15,7 @@ const slideControls = {
 
   debug: true, // turns on debugger and console traces (*also lesson menu - not active, but will switch lesson[])
   currentLesson: 0, // determines with lesson in lessons[] array (below)
-  locked: true, // unlock course Nav -- for icon to show, debug must be true
+  locked: false, // unlock course Nav -- for icon to show, debug must be true
   
   play: true, // Play Btn - default position unpaused
   audioStream: false, // Is audio playing
@@ -26,7 +26,7 @@ const slideControls = {
     {
       id: 0,
       path: 'm1l1',
-      name: "Personnel Recovery",
+      name: "Overview",
       currentSlide: 0,
       bookmark: 0,
       completed: false

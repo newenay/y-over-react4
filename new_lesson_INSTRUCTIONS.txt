@@ -2,7 +2,7 @@ _________ WELCOME TO THE MATRIX _________
 
 1.) to START SERVER from the command line:
     a.) type cmd in window's start menu
-    b.) type "cd desktop\test_envir4\y-over-react4" + enter
+    b.) type "cd desktop/test_envir4/y-over-react4" + enter
     c.) you should now be in the correct directory, type "npm start" + enter
     d.) wait patiently for server to start (in your default browser, chrome preferred). You can now copy & paste "localhost:3000/#" into any browser you wish.
 
