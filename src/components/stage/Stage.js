@@ -67,7 +67,7 @@ class Stage extends PureComponent {
     // Redundant Code (already in Render, try to pass later)
     var i = this.getSlideIndex_IE(this.props.match.params.slideId);
     this.props.rewind(i)
-    this.AudioPlayerRef.current.updateCurrentTime(); // defaultTime = 0
+    this.AudioPlayerRef.current.updateCurrentTime();  //enable/disable defaultTime = 0
   }
 
   togglePopup(){
@@ -133,13 +133,22 @@ class Stage extends PureComponent {
     // Optional Text Btn
     let htmlOptTxt = this.createMarkup(slide.optionalTxt); //Sanitize into <tags>
     let optTextBtn;
+    let themeColor = slide.darkTheme;
+    
+    /* if(slide.background){
+      _background = slide.background;
+    }else{
+      _background = "#fff";
+    } */
+
     if(slide.optionalTxt !== false){
       optTextBtn = <button id='optBtnSkin' onClick={this.togglePopup.bind(this)}>Additional Info</button>
     }
 
     return (
       <div id='stageContainer'>
-        <div id="slideContainer">
+        {/* style={{ backgroundColor: _background }} */}
+        <div id='slideContainer' className={themeColor ? 'darkTheme' : 'lightTheme'} >
           
           {/* RENDER LAYOUT */}
           {this.checkLayoutType(slide, _slideBullets, _cuePoint)}
@@ -161,7 +170,7 @@ class Stage extends PureComponent {
 
             <span>
               {/* <ErrorBoundary> */}
-                {this.checkAudioSource(slide.audio, audioSrc, _cuePoint, allBullets)}
+                {  this.checkAudioSource(slide.audio, audioSrc, _cuePoint, allBullets)  /* enable/disable */ }
               {/* </ErrorBoundary> */}
             </span>
           </div>

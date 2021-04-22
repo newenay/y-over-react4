@@ -25,12 +25,6 @@
   right: 5px;
 }
 
-.helpBtnPos{
-  position: absolute;
-  top: 160px;
-  left: 250px;
-}
-
 #mediaContainer #speech-bubble, 
 /* #likes, */ .button, #comment-count {
     margin: 0;

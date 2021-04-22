@@ -14,11 +14,32 @@
     /* background-image: 'process.env.PUBLIC_URL + /images/m2l1/bg.png'; */
 }
 
+.lightTheme {
+    /* DEFAULT THEME */
+}
+
+.darkTheme {
+    background: #1a2740;
+    color: lightgray;
+}
+
 .animateTitle {
     animation: fadeUp .3s ease cubic-bezier(.25, .25, .50, .75);
     animation-name: fadeUp;
     animation-duration: .75s;
     width: 400px;
+    padding: 10px; /* instead of margin-top which moves cell */
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+    /* background-color: rgba(18, 1, 255, 0.226); */
+}
+
+.animateTitleLong {
+    animation: fadeUp .3s ease cubic-bezier(.25, .25, .50, .75);
+    animation-name: fadeUp;
+    animation-duration: .75s;
+    width: 800px;
     padding: 10px; /* instead of margin-top which moves cell */
     margin-top: 0px;
     margin-left: 0px;

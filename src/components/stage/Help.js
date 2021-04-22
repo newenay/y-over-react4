@@ -12,7 +12,7 @@ const Help = (props) => {
 
   return (
     <div id='stageContainer'>
-      <div id="container">
+      <div id="slideContainer">
         <div className="stage-full">
           <h2 className="animateTitleLong" key="helpTitle" >Help - Explanation of Features</h2>
           <div id='mediaContainer' >

@@ -31,7 +31,7 @@
     -->
     <title>Courseware UI/UX</title>
   </head>
-  <body onbeforeunload="ScormTerminate()" onContextMenu='return false;' >
+  <body onbeforeunload="ScormTerminate()"> <!-- onContextMenu='return false;' disables right-click -->
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
@@ -61,7 +61,6 @@
         console.log("SCOSessionInitializedHandler()", BM, typeof BM)
       }
     </script>
-    
     <!--<script type="text/javascript" src="%PUBLIC_URL%/js/assignObjectPolyfill.js"></script>  Polyfill for object.assign IE11 error-->
     <!-- Polyfill handled in react-scripts/config 
       <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes"></script> 
