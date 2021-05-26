@@ -51,7 +51,7 @@ class Stage extends PureComponent {
     // Redundant Code (already in Render, try to pass later)
     var i = this.getSlideIndex_IE(this.props.match.params.slideId);
     var slide = this.props.slideInfo[i];
-    
+
     if(slide.cuePoint < stopCues){
       /* if(slide.cuePoint !== "0") */
         this.props.increment(i) //reducer.index
@@ -134,12 +134,6 @@ class Stage extends PureComponent {
     let htmlOptTxt = this.createMarkup(slide.optionalTxt); //Sanitize into <tags>
     let optTextBtn;
     let themeColor = slide.darkTheme;
-    
-    /* if(slide.background){
-      _background = slide.background;
-    }else{
-      _background = "#fff";
-    } */
 
     if(slide.optionalTxt !== false){
       optTextBtn = <button id='optBtnSkin' onClick={this.togglePopup.bind(this)}>Additional Info</button>

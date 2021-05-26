@@ -1,5 +1,6 @@
 import React from 'react'
 import './PictureViewer.css'
+import CrossFadeImage from './CrossFadeImage' 
 import '../../utilities/loader.css'
 import FlashObject from './FlashObject'
 
@@ -27,7 +28,8 @@ const PictureViewer = (props) => {
         case 'jpg':
         case 'png':
         case 'svg':
-          return <img className='mediaFade' src={_source} alt={toString(props.slide.title)} />;
+          return <div className='mediaFade'><CrossFadeImage src={_source} duration={500} timingFunction={"ease"} />
+          {/* <img className='mediaFade' src={_source} alt={toString(props.slide.title)} />; */}</div>
         
         case 'mp4':
           return <video /* width="320" height="240" */ controls controlsList="nodownload">

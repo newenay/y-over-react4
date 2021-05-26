@@ -5,9 +5,10 @@ const Debugger = (props) => {
 
     let n = props.slideControls.currentLesson
     let _currentSlide = props.slideControls.lessons[n].currentSlide
+    let _cuePoint = props.slideInfo[_currentSlide].cuePoint
     let _bookmark = props.slideControls.lessons[n].bookmark
     let _exam = Boolean(props.slideInfo[_currentSlide].layout === 5)
-
+    
     return(
         <div className="debugger">
             <div>
@@ -34,12 +35,20 @@ const Debugger = (props) => {
             <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
             <div>
                 <small>
-                    <h6 className='d-flex'>Slide Specific</h6>
+                    <h6 className='d-flex'>Slide Controls</h6>
                     <span><b>play (not paused):</b> {props.slideControls.play.toString()}</span><br />
                     <span><b>audioStream:</b> {props.slideControls.audioStream.toString()}</span><br />
                     <span><b>audioEnd (Next):</b> {props.slideControls.audioEnd.toString()}</span><br />
                     <span><span aria-label='glyph' role='img'>&#9757;</span><b>_exam (prevent Next):</b> {_exam.toString()}</span><br />
                     <span><b>timeSync:</b> {props.slideControls.timeSync}</span><br />
+                </small>
+            </div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div>
+                <small>
+                    <h6 className='d-flex'>Slide Info</h6>
+                    <span><b>cuePoint:</b> {_cuePoint.toString()}</span><br />
+                    {/* <span><b>currentImage:</b> {props.slideBullets.bullet.toString()}</span><br /> */}
                 </small>
             </div>
         </div>
