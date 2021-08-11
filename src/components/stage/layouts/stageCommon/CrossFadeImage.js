@@ -11,6 +11,23 @@ export default class CrossfadeImage extends Component {
     };
   }
 
+  componentDidMount() {
+    //PreLoad Graphics
+    const slideBullets = this.props.slideBullets[this.props.match.params.slideId]
+    const slideImages = []
+    for (var n=0; n < slideBullets.length; n++){
+      slideImages.push(process.env.PUBLIC_URL + slideBullets[n].graphic)
+    };
+
+    //console.log( slideImages )
+
+    slideImages.forEach((image) => {
+      new Image().src = image
+      //window[image] = 
+    });
+      
+  }
+
   static getDerivedStateFromProps(nextProps, prevState){
     
     //console.log(nextProps.src, prevState.topSrc)

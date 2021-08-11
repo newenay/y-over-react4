@@ -28,7 +28,7 @@ const PictureViewer = (props) => {
         case 'jpg':
         case 'png':
         case 'svg':
-          return <div className='mediaFade'><CrossFadeImage src={_source} duration={500} timingFunction={"ease"} />
+          return <div className='mediaFade'><CrossFadeImage src={_source} duration={500} timingFunction={"ease"} {...props} />
           {/* <img className='mediaFade' src={_source} alt={toString(props.slide.title)} />; */}</div>
         
         case 'mp4':

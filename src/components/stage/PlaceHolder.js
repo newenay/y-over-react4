@@ -5,7 +5,7 @@ import './layouts/stageStylz/LayoutFull.css';
 
 const PlaceHolder = (props) => {
 
-  let _source = process.env.PUBLIC_URL + '/video/PR106_Intro.mp4';
+  let _source = process.env.PUBLIC_URL + '/video/Intro_Video.mp4';
   let n = props.slideControls.currentLesson
   let _bookmark = props.slideControls.lessons[n].bookmark
 

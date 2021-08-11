@@ -73,8 +73,8 @@
 }
 
 .dangerousBullet ul { /* override index.css */
-    margin-left: 50px;
-    margin-top: -7px; 
+    margin-left: 20px;
+    margin-top: 5px; 
 }
 
 .audioTimer {

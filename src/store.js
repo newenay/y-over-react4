@@ -3,9 +3,9 @@ import { createStore/* , applyMiddleware, compose */ } from 'redux'
 //import { routerMiddleware } from 'react-router-redux'
 import rootReducer from './reducers/index' // Or wherever you keep your reducers
 
-import slideBullets from './data/m10l1_nar'
-import slideInfo from './data/m10l1_info'
-import examQuestions from './data/m10l1_exam'
+import slideBullets from './data/m1l1_nar'
+import slideInfo from './data/m1l1_info'
+import examQuestions from './data/m1l1_exam'
 /* import lessonSwap from './data/course_info' */
 
 //Also change currentLesson below to correct Lessons:id
@@ -13,8 +13,8 @@ import examQuestions from './data/m10l1_exam'
 // App State
 const slideControls = {
 
-  debug: true, // turns on debugger and console traces (*also lesson menu - not active, but will switch lesson[])
-  currentLesson: 9, // determines with lesson in lessons[] array (below)
+  debug: false, // turns on debugger and console traces (*also lesson menu - not active, but will switch lesson[])
+  currentLesson: 0, // determines with lesson in lessons[] array (below)
   locked: false, // unlock course Nav -- for icon to show, debug must be true
   
   play: true, // Play Btn - default position unpaused
