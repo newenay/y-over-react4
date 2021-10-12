@@ -46,12 +46,13 @@ const slideInfo = [
   },
   {
     "id": "m1l1f06",
-    "title": "Lesson Summary",
+    "title": "Lesson Summary (darkTheme example)",
     "narration": "<p>Congratulations!<p>This concludes the lesson. You should now be able to:<ul><li>Identify the first objective<li>The second objective</ul></p>",
     "cuePoint": 0,
     "layout": 0,
     "optionalTxt": false,
-    "audio": false,     
+    "audio": false, 
+    "darkTheme": true,    
   },
   {
     "id": "m1l1f07",

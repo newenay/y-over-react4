@@ -8,6 +8,7 @@ import slideInfo from './data/m1l1_info'
 import examQuestions from './data/m1l1_exam'
 /* import lessonSwap from './data/course_info' */
 
+
 //Also change currentLesson below to correct Lessons:id
 
 // App State
@@ -26,12 +27,12 @@ const slideControls = {
     {
       id: 0,
       path: 'm1l1',
-      name: "Personnel Recovery",
+      name: "Die Brücke (The Bridge)",
       currentSlide: 0,
       bookmark: 0,
       completed: false
     },
-    {
+    /*{
       id: 1,
       path: 'm2l1',
       name: "Joint Operations",
@@ -102,7 +103,7 @@ const slideControls = {
       currentSlide: 0,
       bookmark: 0,
       completed: false
-    },
+    },*/
   ]
 }
 

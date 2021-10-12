@@ -111,7 +111,7 @@ class AudioPlayer extends PureComponent {
     window.requestAnimationFrame( this.loopGraphicEQ );
     this.analyser.getByteFrequencyData(this.fbc_array);
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height); // Clear the canvas
-    this.ctx.fillStyle = 'rgb(148, 54, 124)'; //Orange - 'rgb(228, 120, 20, 0.75)';  Color of the bars
+    this.ctx.fillStyle = '#777777'; //Purple rgb(148, 54, 124); Color of the bars
     var bars = 100;
     
     for (var i = 0; i < bars; i++) {

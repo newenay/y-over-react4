@@ -7,8 +7,9 @@
 
 .helpBtnPos{
     position: absolute;
-    top: 160px;
-    left: 250px;
+    top: 120px;
+    text-align: center;
+    padding: 20px;
   }
 
 .stage-full-intro { /* img - KC does not like */ 
