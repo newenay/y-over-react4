@@ -1,0 +1,21 @@
+body {font-family: Arial, Helvetica, sans-serif; background-color: #FFFFFF}
+
+h1 {font-family: Futura; color: #333366; font-size: 12pt}
+
+h2 {font-size: 12pt color: blue}
+
+p {font-size:10pt;}
+
+hr {color:navy}
+
+a:link     {font-size:10pt; color:blue}
+a:visited  {color:purple}
+a:hover    {color:blue}
+a:active   {color:purple}
+
+LI.square { list-style-type: square }
+UL.plain  { list-style-type: none }
+OL        { list-style-type: upper-alpha; font-size:10pt;}  /* A B C D E etc. */
+OL OL     { list-style-type: decimal }      /* 1 2 3 4 5 etc. */
+OL OL OL  { list-style-type: lower-roman }  /* i ii iii iv v etc. */
+

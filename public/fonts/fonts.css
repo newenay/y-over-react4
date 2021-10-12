@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Oswald';
+    font-weight: normal;
+    font-style: normal;
+    src: url("./Oswald/Oswald.eot"); /* IE9 Compatible */
+    src: url("./Oswald/Oswald.eot?#iefix") format('embedded-opentype'), /* IE6-IE8 */
+         url('./Oswald/Oswald-VariableFont_wght.woff') format('woff'), /* Modern Browsers */
+         url('./Oswald/Oswald-VariableFont_wght.woff2') format('woff2'),
+         url('./Oswald/Oswald-VariableFont_wght.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./Oswald/Oswald-VariableFont_wght.svg#Oswald') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-weight: normal;
+    font-style: normal;
+    src: url("./Roboto/Roboto-Regular.eot"); /* IE9 Compatible */
+    src: url("./Roboto/Roboto-Regular.eot?#iefix") format('embedded-opentype'), /* IE6-IE8 */
+         url("./Roboto/Roboto-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
+         url("./Roboto/Roboto-Regular.woff") format("woff"), /* Modern Browsers */
+         url("./Roboto/Roboto-Regular.woff2") format("woff2"),
+         url("./Roboto/Roboto-Regular.svg#Roboto") format("svg");
+}
+
+@font-face {
+    font-family: "Roboto Condensed";
+    font-weight: normal;
+    font-style: normal;
+    src: url("./Roboto/Roboto-Condensed-Regular.eot"); /* IE9 Compatible */
+    src: url("./Roboto/Roboto-Condensed-Regular.eot?#iefix") format('embedded-opentype'), /* IE6-IE8 */
+         url("./Roboto/Roboto-Condensed-Regular.ttf") format("truetype"),
+         url("./Roboto/Roboto-Condensed-Regular.woff") format("woff"),
+         url("./Roboto/Roboto-Condensed-Regular.woff2") format("woff2"),
+         url('./Roboto/Roboto-Condensed-Regular.svg#Roboto+Condensed') format('svg'); /* Legacy iOS */
+}
+
+/* _______________ Not Used _______________ */
+@font-face {
+    font-family: "Montserrat";
+    font-weight: normal;
+    font-style: normal; /* 400 */
+    src: url("./Montserrat/Montserrat-Regular.eot");
+    src: url("./Montserrat/Montserrat-Regular.eot?#iefix") format('embedded-opentype'),
+         url("./Montserrat/Montserrat-Regular.ttf") format("truetype"),
+         url("./Montserrat/Montserrat-Regular.woff2") format("woff2"),
+         url("./Montserrat/Montserrat-Regular.woff") format("woff");
+}
