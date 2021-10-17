@@ -4,7 +4,7 @@
 2.) Create a new folder called `y-over-react4` on you computer, and make it an empty local git repository.<br><br>
     a.) For example: `cd ~/code/y-over-react4`<br>
     b.) `git init`<br><br>
-3.) Set up a `git pull https://github.com/newenay/y-over-react4.git` in the new repository<br>
+3.) Set up a clone of the repository `git clone https://github.com/newenay/y-over-react4.git`<br>
 4.) Run `npm install` to install the missing node_modules from the package.json<br>
 5.) Run `npm start` to launch the starter introductory lesson<br>
 6.) See "new_lesson_INSTRUCTIONS.txt" for further help on creating a new lesson<br>
